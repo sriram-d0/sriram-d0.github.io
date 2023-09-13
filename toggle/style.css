@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transition: all 0.4s linear;
+}
+
+body.dark {
+    background-color: rgb(27, 23, 23);
+}
+
+.toggleBtn {
+    z-index: 2;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1.5px 1.5px 5px #373636;
+    background: linear-gradient(145deg, #e1e1e1, #fff);
+}
+
+.bgMove {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+    border-radius: 50%;
+    transition: all 0.4s linear;
+    transform: translate(80%, -50%);
+    background-color: rgb(27, 23, 23);
+}
+
+.fa-sun {
+    color: white;
+}
+
+.bgMove.active {
+    color: white;
+    z-index: -2;
+    transition: all 0.4s linear;
+    transform: translate(340%, -50%);
+    background-color: rgb(27, 23, 23);
+}
+
+
+.dark {
+    color: rgb(16, 14, 14);
+    transition: all 0.4s linear;
+}
+
+.active {
+    color: white;
+    transition: all 0.4s linear;
+}
+
+.active body {
+    background-color: purple;
+}
+
+i {
+    z-index: 4;
+    width: 100px;
+    margin: .5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: all 0.4s linear;
+}
