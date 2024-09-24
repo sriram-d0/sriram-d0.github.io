@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Images/project.png">
+    <title>Projects</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: Candara, sans-serif;
+            display: flex;
+            flex-direction: column; /* Stack the content vertically */
+            align-items: center; /* Center align items */
+            padding: 20px;
+            
+        }
+
+        #container {
+            background-color: rgba(46, 41, 41, 0.9); /* Light white background */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px; /* Padding inside the box */
+            max-width: 960px; /* Limit max width */
+            width: 100%; /* Full width */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            
+        }
+
+        #about-info {
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column; /* Stack the icons and names vertically */
+            align-items: center; /* Center align items */
+            margin-top: 20px; /* Space above this section */
+            color: hsl(45, 14%, 95%);
+        }
+
+        #imgs {
+            display: flex;
+            justify-content: center; /* Center icons */
+            gap: 55px; /* Space between icons */
+        }
+
+        #imgs img {
+            width: 40px; /* Icon size */
+            height: auto;
+            border-radius: 60%;
+            cursor: pointer;
+            filter: brightness(70%);
+        }
+
+        #linkname {
+            display: flex;
+            justify-content: center; /* Center names */
+            margin-top: 10px; /* Space above names */
+            gap: 30px;
+            font-weight: bold;
+        }
+
+        #linkname a {
+            color: hsl(45, 14%, 95%);
+            text-decoration: none; /* Remove underline */
+            text-align: center; /* Center text */
+        }
+
+        #about-text {
+            color: hsl(45, 14%, 95%); /* Change text color to black for contrast */
+            font-weight: bold;
+            font-size: 1.5rem; /* Responsive font size */
+            text-align: left; /* Align text to left */
+        }
+
+        #btn {
+            background-color: rgb(103, 19, 136);
+            
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 10px;
+            padding: 10px 15px; /* Add padding for better appearance */
+            border: none; 
+            cursor: pointer; 
+            display: block;             
+        }
+        #btn a{
+            text-decoration: none;
+            color: white;
+        }
+        #btn:hover{
+            background-color: rgba(228, 210, 210, 0.9); 
+            
+            font-weight: bold;
+            font-size: 15px;
+        }
+        #btn:hover a{
+            color: black;
+        }
+        #footer {
+            margin-top: 15px;
+            color: hsl(45, 14%, 95%);
+            text-align: center;
+            font-size: 14px;
+        }
+        .projhead h2{
+            color: goldenrod;
+        }
+        .projhead{
+            text-decoration: none;
+        }
+        .projhead:hover{
+            text-decoration: underline;            
+        }
+        .projhead:hover h2 {
+    color: aquamarine 
+}
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="about-text">
+            <h2>Projects</h2>
+            <div style="width: 55px; height: 5px; background-color:hsl(45, 100%, 65%); border-radius: 3px; margin-top: -1%;"></div>
+            <a href="" class="projhead"><h2>Weather API</h2></a>
+
+            <p>Created a dynamic weather retrieval webpage using HTML, CSS, and JavaScript, delivering real-time weather information for users worldwide.</p>
+            <button id="btn"><a href="./Weather/index.html">Check Weather</a></button>
+
+            <a href="" class="projhead"><h2>Internal Calculator</h2></a>
+
+            <p>The internal calculator makes it easy for students to calculate their internal marks, simplifying academic calculations.
+
+            </p>
+            <button id="btn"><a href="./Internal/internal.html">Calculate Here</a></button>
+
+            <a href="" class="projhead"><h2>Order It</h2></a>
+
+            <p></p>Created a user-friendly Food Ordering App for browsing menus, placing orders, and real-time delivery tracking during my internship at WSA Academy.</p>
+
+            </p>
+            <button id="btn"><a href="https://github.com/sriram-d0/Order-It">Navigate</a></button>
+        </div>
+
+        <div id="about-info" style="margin-top: 60px;">
+            <div id="imgs">
+                <a href="../index.html"><img src="Images/home-button.png" alt="Home"></a>
+                <a href="./about.html"><img src="Images/about.png" alt="Projects"></a>
+                <a href="./skills.html"><img src="Images/skills.png" alt="Skills"></a>                
+                <a href="./certifcations.html"><img src="Images/certficate.png" alt="Certifications"></a>
+            </div>
+            <div id="linkname">
+                <a href="../index.html">Home</a>
+                <a href="./about.html">About</a>
+                <a href="../Assets/skills.html">Skills</a>
+                
+                <a href="./certifcations.html">Certifications</a>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        &copy; 2024 Sriram Dutta. All rights reserved.
+    </footer>
+</body>
+</html>

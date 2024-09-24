@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--@Sriram-->
+    <title>Internal Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #gradeForm {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #800000;
+            text-shadow: 0 0 2px blue;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #800000;
+        }
+
+        input[type="number"], input[type="text"] {
+            width: calc(100% - 16px); 
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            
+        }
+
+        button {
+            width: 48%;
+            padding: 10px;
+            margin-top: 10px; 
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #a8e5ab;
+            color: black;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        #gradeOutput {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="gradeForm">
+        <h1>Internal Calculator</h1>
+        <form id="gradeInputForm">
+            <label for="mid1">Mid 1:</label>
+            <input type="number" step="1" id="mid1" required placeholder="18"><br>
+
+            <label for="mid2">Mid 2:</label>
+            <input type="number" step="1" id="mid2" required placeholder="18"><br>
+
+            <label for="quiz1">Quiz 1:</label>
+            <input type="number" step="1" id="quiz1" required placeholder="12"><br>
+
+            <label for="quiz2">Quiz 2:</label>
+            <input type="number" step="1" id="quiz2" required placeholder="12"><br>
+
+            <label for="assign1">Assignment 1:</label>
+            <input type="number" step="1" id="assign1" required placeholder="12"><br>
+
+            <label for="assign2">Assignment 2:</label>
+            <input type="number" step="1" id="assign2" required placeholder="12"><br>
+
+            <label for="attendance">Attendance (present/total):</label>
+            <input type="text" id="attendance" required placeholder="31/31"><br>
+
+            <button type="button" onclick="calculateGrade()">Calculate Internals</button>
+            <button type="button" onclick="resetForm()">Re-Calculate</button>
+        </form>
+
+        <p id="gradeOutput"></p>
+    </div>
+
+    <script>
+        function calculateGrade() {
+            var mid1 = parseFloat(document.getElementById('mid1').value);
+            var mid2 = parseFloat(document.getElementById('mid2').value);
+            var quiz1 = parseFloat(document.getElementById('quiz1').value);
+            var quiz2 = parseFloat(document.getElementById('quiz2').value);
+            var assign1 = parseFloat(document.getElementById('assign1').value);
+            var assign2 = parseFloat(document.getElementById('assign2').value);
+            var attendance = document.getElementById('attendance').value;
+
+            var l = [mid1, mid2, quiz1, quiz2, assign1, assign2];
+            var l1 = [], l2 = [];
+            for (var i = 0; i < 6; i += 2) {
+                l1.push(Math.max(l[i], l[i + 1]));
+                l2.push(Math.min(l[i], l[i + 1]));
+            }
+
+            var per25 = (((l1[1] + l1[2]) * 7 * 0.8) + ((l2[1] + l2[2]) * 7 * 0.2)) / 24;
+            per25 += l1[0] * 0.8 + l2[0] * 0.2;
+
+            var att = parseFloat(attendance) * 100;
+            att = Math.round(att, 0);
+            att = att >= 90 ? 5 : (att >= 85 ? 4 : (att >= 80 ? 3 : (att >= 75 ? 2 : 0)));
+
+            var total = per25 + att;
+
+            document.getElementById('gradeOutput').innerHTML = "Your Marks: " + total.toFixed(2) + "/30";
+        }
+
+        function resetForm() {
+            document.getElementById('gradeInputForm').reset();
+            document.getElementById('gradeOutput').innerHTML = "";
+        }
+    </script>
+</body>
+</html>

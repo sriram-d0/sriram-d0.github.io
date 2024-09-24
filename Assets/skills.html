@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Images/skills.png">
+    <title>Skills</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: Candara, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #container {
+            margin-top: 100px;
+            background-color: rgba(46, 41, 41, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 100%; /* Change to 100% for better responsiveness */
+            width: auto; /* Auto width */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #about-text {
+            color: hsl(45, 14%, 95%);
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Allow items to wrap in smaller screens */
+            margin-top: 20px;
+        }
+
+        .b1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px; /* Add some margin for spacing */
+            padding: 10px 20px; /* Adjust padding */
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(235, 206, 206, 0.2);
+            flex: 1; /* Allow flex items to grow */
+            min-width: 250px; /* Set a minimum width for better layout */
+        }
+
+        .header1 {
+            margin: 0;
+            color: hsl(45, 100%, 65%);
+        }
+
+        .p1 {
+            margin: 0;
+            font-size: 18px; /* Adjust font size for smaller screens */
+            text-align: justify;
+            width: 100%;
+        }
+
+        #about-info {
+            margin-top: 60px;
+            width: 100%; /* Full width for mobile */
+        }
+
+        #imgs {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Adjust spacing for icons */
+        }
+
+        #linkname {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 15px; /* Adjust spacing for links */
+        }
+
+        #skillsH1 span{
+            color: hsl(45, 100%, 65%);
+        }
+
+        #imgs {
+            display: flex;
+            justify-content: center; /* Center icons */
+            gap: 55px; /* Space between icons */
+        }
+
+        #imgs img {
+            width: 40px; /* Icon size */
+            height: auto;
+            border-radius: 60%;
+            cursor: pointer;
+            filter: brightness(70%);
+        }
+
+        #linkname {
+            display: flex;
+            justify-content: center; /* Center names */
+            margin-top: 10px; /* Space above names */
+            gap: 30px;
+            font-weight: bold;
+        }
+
+        #linkname a {
+            color: hsl(45, 14%, 95%);
+            text-decoration: none; /* Remove underline */
+            text-align: center; /* Center text */
+        }
+
+        @media (max-width: 768px) {
+            #container {
+                padding: 15px; /* Adjust padding for smaller screens */
+            }
+
+            .header1 {
+                font-size: 1.2rem; /* Reduce header size */
+            }
+
+            .p1 {
+                font-size: 16px; /* Reduce paragraph size */
+            }
+
+            
+        }
+
+        @media (max-width: 480px) {
+            .b1 {
+                padding: 10px 15px; /* Further adjust padding */
+            }
+
+            .header1 {
+                font-size: 1rem; /* Further reduce header size */
+            }
+
+            .p1 {
+                font-size: 14px; /* Further reduce paragraph size */
+            }
+        }
+
+        span {
+            color:cyan;
+        }
+        
+        #he1 {
+            margin-top: -1.5%;
+            color: hsl(45, 25%, 22%);
+        }
+        
+        #btn {
+            background-color: green;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            padding: 10px 15px; /* Add padding for better appearance */
+            border: none; 
+            cursor: pointer; 
+            display: block; 
+            margin: 20px auto; /* Center the button */
+        }
+
+        #footer {
+            margin-top: 100px;
+            color: hsl(45, 14%, 95%);
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="about-text">
+            <h1 id="skillsH1">SK<span>I</span>LLS</h1>
+            <div class="skills-container">
+                <div class="b1">
+                    <h2 class="header1">Technical</h2>
+                    <p class="p1"><span>Programming:</span>Java,Python,C,JavaScript,<br> HTML, CSS, Node.js, React.js</p>
+                    <p class="p1"><span>Tools & Software:</span> VS Code, Git, Jupyter Notebook,<br> Adobe Photoshop</p>
+                    <p class="p1"><span>Databases:</span> MongoDB, MySQL</p>
+                </div>
+                <div class="b1">
+                    <h2 class="header1">Soft Skills</h2>
+                    <p class="p1">Leadership</p>
+                    <p class="p1">Organizing & Management skills</p>
+                    <p class="p1">Good communication skills</p>
+                </div>
+                <div class="b1">
+                    <h2 class="header1">Languages</h2>
+                    <p class="p1">Telugu</p>
+                    <p class="p1">English</p>
+                    <p class="p1">Hindi</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="about-info" style="margin-top: 60px;">
+            <div id="imgs">
+                <a href="../index.html"><img src="Images/home-button.png" alt="Home"></a>
+                <a href="./about.html"><img src="Images/about.png" alt="About"></a>
+                <a href="./projects.html"><img src="Images/project.png" alt="Projects"></a>
+                <a href="./certifcations.html"><img src="Images/certficate.png" alt="Certifications"></a>
+            </div>
+            <div id="linkname">
+                <a href="../index.html">Home</a>
+                <a href="./about.html">About</a>
+                <a href="./projects.html">Projects</a>
+                <a href="./certifcations.html">Certifications</a>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        &copy; 2024 Sriram Dutta. All rights reserved.
+    </footer>
+</body>
+</html>
