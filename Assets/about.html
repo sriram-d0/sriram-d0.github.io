@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Images/about.png">
+    <title>About</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: Candara, sans-serif;
+            display: flex;
+            flex-direction: column; /* Stack the content vertically */
+            align-items: center; /* Center align items */
+            padding: 20px;
+            
+        }
+
+        #container {
+            background-color: rgba(46, 41, 41, 0.9); /* Light white background */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px; /* Padding inside the box */
+            max-width: 960px; /* Limit max width */
+            width: 100%; /* Full width */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            
+        }
+
+        #about-info {
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column; /* Stack the icons and names vertically */
+            align-items: center; /* Center align items */
+            margin-top: 20px; /* Space above this section */
+            color: hsl(45, 14%, 95%);
+        }
+
+        #imgs {
+            display: flex;
+            justify-content: center; /* Center icons */
+            gap: 55px; /* Space between icons */
+        }
+
+        #imgs img {
+            width: 40px; /* Icon size */
+            height: auto;
+            border-radius: 60%;
+            cursor: pointer;
+            filter: brightness(70%);
+        }
+
+        #linkname {
+            display: flex;
+            justify-content: center; /* Center names */
+            margin-top: 10px; /* Space above names */
+            gap: 30px;
+            font-weight: bold;
+        }
+
+        #linkname a {
+            color: hsl(45, 14%, 95%);
+            text-decoration: none; /* Remove underline */
+            text-align: center; /* Center text */
+        }
+
+        #about-text {
+            color: hsl(45, 14%, 95%); /* Change text color to black for contrast */
+            font-weight: bold;
+            font-size: 1.5rem; /* Responsive font size */
+            text-align: left; /* Align text to left */
+        }
+
+        #btn {
+            background-color: green;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            padding: 10px 15px; /* Add padding for better appearance */
+            border: none; 
+            cursor: pointer; 
+            display: block; 
+            margin: 20px auto; /* Center the button */
+        }
+
+        #footer {
+            margin-top: 15px;
+            color: hsl(45, 14%, 95%);
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="about-text">
+            <h2>About me</h2>
+            <div style="width: 55px; height: 5px; background-color:hsl(45, 100%, 65%); border-radius: 3px;"></div>
+            <p>I am Uday Sriram Dutta, an undergraduate Software Engineering student at RVR&JC College of Engineering. I am passionate about developing and maintaining technology solutions that enhance performance and make a positive impact.</p>
+            <h2>Contact Me</h2>
+            <div style="width: 55px; height: 5px; background-color:hsl(45, 100%, 65%); border-radius: 3px; margin-bottom: 30px;"></div>
+            <form action="send_email.php" method="post" id="nam">
+                <label for="name">Name :</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                
+                <label for="message">Message : </label>
+                <input id="message" name="message" required>
+                <br>
+
+                <input type="submit" value="Send" id="btn">
+            </form>
+        </div>
+
+        <div id="about-info" style="margin-top: 60px;">
+            <div id="imgs">
+                <a href="../index.html"><img src="Images/home-button.png" alt="Home"></a>
+                <a href="./skills.html"><img src="Images/skills.png" alt="Skills"></a>
+                <a href="./projects.html"><img src="Images/project.png" alt="Projects"></a>
+                <a href="./certifcations.html"><img src="Images/certficate.png" alt="Certifications"></a>
+            </div>
+            <div id="linkname">
+                <a href="../index.html">Home</a>
+                <a href="../Assets/skills.html">Skills</a>
+                <a href="./projects.html">Projects</a>
+                <a href="./certifcations.html">Certifications</a>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        &copy; 2024 Sriram Dutta. All rights reserved.
+    </footer>
+</body>
+</html>
